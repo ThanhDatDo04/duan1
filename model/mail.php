@@ -17,12 +17,12 @@ function  sendConfirmationEmail($name_user, $email_user, $phone_user, $subject_n
         $mail->SMTPSecure = 'tls'; // kết nối an toàn SMTP: tls hoặc ssl
         $mail->Host = "sandbox.smtp.mailtrap.io"; // địa chỉ máy chủ SMTP của bạn
         $mail->Port = 587; // cổng SMTP của bạn
-        $mail->Username = "44182cdd746b07"; // tài khoản SMTP của bạn
-        $mail->Password = "956449fad70de4"; // mật khẩu SMTP của bạn
+        $mail->Username = "2cf2ae45f5aced"; // tài khoản SMTP của bạn
+        $mail->Password = "df50861fff3e3e"; // mật khẩu SMTP của bạn
         $mail->SetFrom($email_user); // địa chỉ email người gửi
         $mail->Subject = "$subject_name"; // chủ đề email 
         $mail->Body = 'Tên Khách Hàng: ' . $name_user . ' <br>Email: ' . $email_user . ' <br> Phone: ' . $phone_user . ' <br> Feedback: ' . $content; // nội dung email
-        $mail->AddAddress('hieubtph32408@fpt.edu.vn'); // địa chỉ email người nhận
+        $mail->AddAddress('dattcph39258@fpt.edu.vn'); // địa chỉ email người nhận
 
         if (!$mail->Send()) {
             return false; // Gửi email thất bại
